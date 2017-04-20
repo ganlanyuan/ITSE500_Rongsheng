@@ -7,7 +7,7 @@ public class SquaresCubesTable {
     public static void main(String[] args) {
         boolean output = true;
         int number = 0;
-        char inputString = 'n';
+        char inputChar = 'n';
         Scanner input = new Scanner(System.in);
         
         do {
@@ -19,8 +19,8 @@ public class SquaresCubesTable {
             }
             
             System.out.println("\nContinue? (y/n):");
-            inputString = input.next().charAt(0);
-            output = (inputString == 'y') ? true : false;
+            inputChar = input.next().charAt(0);
+            output = (inputChar == 'y') ? true : false;
         } while (output);
     }
     
