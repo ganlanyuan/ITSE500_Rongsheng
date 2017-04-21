@@ -7,18 +7,22 @@ public class ReverseString {
     
     public static void main(String[] args) {
         String inputString;
-        String reversedString = "";
         input = new Scanner(System.in);
         
         System.out.println("Enter a String:");
         inputString = input.nextLine();
         
-        int len = inputString.length();
-        for ( int i = len - 1; i >= 0; i--) {
-            reversedString += inputString.charAt(i);
-        }
+        System.out.println(reverseString(inputString));
+    }
+    
+    public static String reverseString(String originalStr) {
+        String reversedStr = "";
         
-        System.out.println(reversedString);
+        int len = originalStr.length();
+        for ( int i = len - 1; i >= 0; i--) {
+            reversedStr += originalStr.charAt(i);
+        }
+        return reversedStr;
     }
 
 }

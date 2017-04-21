@@ -15,7 +15,7 @@ public class ScannerDemo {
         System.out.println("Enter second multiple:");
         number2 = input.nextInt();
         
-        sum = number1 + number2;
-        System.out.println(number1 + " + " + number2 + " = " + sum);
+        sum = number1 * number2;
+        System.out.println(number1 + " * " + number2 + " = " + sum);
     }
 }

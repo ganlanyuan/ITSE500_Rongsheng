@@ -4,11 +4,13 @@ import java.util.Scanner;
 
 public class SquaresCubesTable {
     
+    private static Scanner input;
+
     public static void main(String[] args) {
         boolean output = true;
         int number = 0;
         char inputChar = 'n';
-        Scanner input = new Scanner(System.in);
+        input = new Scanner(System.in);
         
         do {
             System.out.println("Enter an integer:");
