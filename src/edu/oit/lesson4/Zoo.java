@@ -25,7 +25,6 @@ public class Zoo {
 
 class Animals extends Zoo {
     private String type;
-    private int age;
     private String food;
     
     public String getType() {
@@ -34,14 +33,6 @@ class Animals extends Zoo {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getFood() {
@@ -58,5 +49,23 @@ class Animals extends Zoo {
 }
 
 class Monkey extends Animals {
+    private String name;
+    private int age;
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+    
+    public void setAge(int age) {
+        this.age = age;
+    }
     
 }
