@@ -13,17 +13,35 @@ public class Zoo {
     public Zoo() {
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setArea(int area) {
+        this.area = area;
+    }
+
+    public int getArea() {
+        return area;
+    }
+
     public static void main(String[] args) {
         Zoo centralParkZoo = new Zoo("Central Park Zoo", 300);
-        System.out.println(centralParkZoo.name + " covers an area of " + centralParkZoo.area + " square feet.");
+        System.out.println(centralParkZoo.getName() + " covers an area of " + centralParkZoo.getArea() + " square feet.");
 
+        // monkey
         Monkey monkey1 = new Monkey();
         monkey1.setName("Steven");
         monkey1.setAge(13);
         monkey1.setGender("male");
         String pronoun = Animals.getPersonalPronoun(monkey1.getGender());
-        System.out.println("\n" + monkey1.getName() + " is a " + monkey1.type + ". " + pronoun + " is " + monkey1.getAge()
-                + " years old and living in a " + monkey1.getSpaceType() + ".");
+
+        System.out.println("\n" + monkey1.getName() + " is a " + monkey1.type + ". " + pronoun + " is "
+                + monkey1.getAge() + " years old and living in a " + monkey1.getSpaceType() + ".");
         System.out.println(monkey1.getName() + " can " + monkey1.canDo1 + " and " + monkey1.canDo2 + ".");
         System.out.println(monkey1.getName() + " eats " + monkey1.food + ".");
 
