@@ -1,6 +1,6 @@
 package edu.oit.lesson5;
 
-public class Duck implements Flyable, Swimable {
+public class Duck implements Flyable, Swimmable {
     
     @Override
     public void fly() {

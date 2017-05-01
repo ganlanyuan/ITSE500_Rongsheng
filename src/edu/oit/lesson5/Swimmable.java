@@ -1,5 +1,5 @@
 package edu.oit.lesson5;
 
-public interface Swimable {
+public interface Swimmable {
     void swim();
 }
