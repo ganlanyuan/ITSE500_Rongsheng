@@ -41,7 +41,7 @@ public class Zoo {
         String pronoun = Animals.getPersonalPronoun(monkey1.getGender());
 
         System.out.println("\n" + monkey1.getName() + " is a " + monkey1.type + ". " + pronoun + " is "
-                + monkey1.getAge() + " years old and living in a " + monkey1.getSpaceType() + ".");
+                + monkey1.getAge() + " years old.");
         System.out.println(monkey1.getName() + " can " + monkey1.canDo1 + " and " + monkey1.canDo2 + ".");
         System.out.println(monkey1.getName() + " eats " + monkey1.food + ".");
 
@@ -54,7 +54,7 @@ public class Zoo {
 
 }
 
-class Animals extends Zoo {
+class Animals {
     public String canDo1 = "eat";
     public String canDo2 = "run";
     private String type;
@@ -74,10 +74,6 @@ class Animals extends Zoo {
 
     public void setFood(String food) {
         this.food = food;
-    }
-
-    public String getSpaceType() {
-        return super.type;
     }
 
     public void run() {

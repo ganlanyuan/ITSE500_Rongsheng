@@ -1,6 +1,6 @@
 package edu.oit.lesson4;
 
-public class Shapes {
+public class Shape {
     private int sides = 0;
 
     public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class Shapes {
     }
 }
 
-class Square extends Shapes {
+class Square extends Shape {
     private int sides = 4;
     private int width;
 
@@ -55,7 +55,7 @@ class Square extends Shapes {
     }
 }
 
-class Rectangle extends Shapes {
+class Rectangle extends Shape {
     private int sides = 4;
     private int length;
     private int width;
@@ -97,7 +97,7 @@ class Rectangle extends Shapes {
     }
 }
 
-class Circle extends Shapes {
+class Circle extends Shape {
     private int radius;
 
     public Circle(int radius) {
@@ -124,7 +124,7 @@ class Circle extends Shapes {
     }
 }
 
-class Triangle extends Shapes {
+class Triangle extends Shape {
     private int sides = 3;
     private int hypotenuse;
     private int opposite;

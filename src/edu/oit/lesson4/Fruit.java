@@ -1,11 +1,11 @@
 package edu.oit.lesson4;
 
-public class Fruits {
+public class Fruit {
     public boolean isEatable = true;
     private int count = 0;
 
     public static void main(String[] args) {
-        Fruits fruits = new Fruits();
+        Fruit fruit = new Fruit();
         
         Apple apple = new Apple();
         apple.setCount(300);
@@ -13,10 +13,10 @@ public class Fruits {
         Orange orange = new Orange();
         orange.setCount(300);
         
-        fruits.setCount(apple, banana, orange);
+        fruit.setCount(apple, banana, orange);
         
         System.out.println("There are " + apple.getCount() + " " + apple.getType() + "s, " + banana.getCount() + " " + banana.getType() + "s, " + orange.getCount() + " " + orange.getType() + "s.");
-        System.out.println(fruits.getCount() + " fruits in total in this garden.");
+        System.out.println(fruit.getCount() + " fruit in total in this garden.");
     }
 
     public static int add(int[] args) {
@@ -35,12 +35,12 @@ public class Fruits {
     
     public void setCount(Apple apple, Banana banana, Orange orange) {
         int[] countList = { apple.getCount(), banana.getCount(), orange.getCount()};
-        this.count = Fruits.add(countList);
+        this.count = Fruit.add(countList);
     }
 
 }
 
-class Apple extends Fruits {
+class Apple extends Fruit {
     private String type = "Apple";
     private String color = "red";
     private int count = 0;
@@ -65,7 +65,7 @@ class Apple extends Fruits {
     }
 }
 
-class Banana extends Fruits {
+class Banana extends Fruit {
     private String type = "banana";
     private String color = "yellow";
     private int count = 0;
@@ -90,7 +90,7 @@ class Banana extends Fruits {
     }
 }
 
-class Orange extends Fruits {
+class Orange extends Fruit {
     private String type = "orange";
     private String color = "orange";
     private int count = 0;

@@ -4,24 +4,24 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class FruitsTest {
+public class FruitTest {
 
     @Test
     public void testAdd() {
-        assertEquals(Fruits.add(new int[]{1, 2, 3}), 6);
+        assertEquals(Fruit.add(new int[]{1, 2, 3}), 6);
     }
 
     @Test
-    public void testFruitsSetGetCount() {
-        Fruits fruits = new Fruits();
+    public void testFruitSetGetCount() {
+        Fruit fruit = new Fruit();
         Apple apple = new Apple(200);
         Banana banana = new Banana(100);
         Orange orange = new Orange(150);
         
-        assertEquals(fruits.getCount(), 0);
+        assertEquals(fruit.getCount(), 0);
         
-        fruits.setCount(apple, banana, orange);
-        assertEquals(fruits.getCount(), 450);
+        fruit.setCount(apple, banana, orange);
+        assertEquals(fruit.getCount(), 450);
     }
     
     @Test
@@ -52,7 +52,7 @@ public class FruitsTest {
     } 
     
     @Test
-    public void testFruitsInheritance() {
+    public void testFruitInheritance() {
         Apple apple = new Apple();
         assertEquals(apple.isEatable, true);
     }    
