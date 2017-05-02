@@ -1,18 +1,28 @@
 package edu.oit.lesson5;
 
-public class Square extends Shape {
+public class Rectangle {
     private int sides = 4;
+    private int length;
     private int width;
-    
-    public Square(int width) {
+
+    public Rectangle(int length, int width) {
+        this.length = length;
         this.width = width;
     }
 
-    public Square() {
+    public Rectangle() {
     }
 
     public int getSides() {
         return sides;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
     }
 
     public int getWidth() {
@@ -23,13 +33,12 @@ public class Square extends Shape {
         this.width = width;
     }
 
-    @Override
-    public double geArea() {
-        // TODO Auto-generated method stub
+    // @Override
+    public double getArea() {
         return calculateArea();
     }
-    
+
     public int calculateArea() {
-        return width * width;
+        return length * width;
     }
 }

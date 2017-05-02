@@ -38,7 +38,7 @@ public class Zoo {
         monkey1.setName("Steven");
         monkey1.setAge(13);
         monkey1.setGender("male");
-        String pronoun = Animals.getPersonalPronoun(monkey1.getGender());
+        String pronoun = Animal.getPersonalPronoun(monkey1.getGender());
 
         System.out.println("\n" + monkey1.getName() + " is a " + monkey1.type + ". " + pronoun + " is "
                 + monkey1.getAge() + " years old.");
@@ -46,7 +46,7 @@ public class Zoo {
         System.out.println(monkey1.getName() + " eats " + monkey1.food + ".");
 
         // new animal
-        Animals newAnimal = new Animals();
+        Animal newAnimal = new Animal();
         newAnimal.setType("Horse");
         newAnimal.setFood("grass");
         System.out.println("\n" + newAnimal.getType() + " eats " + newAnimal.getFood() + ".");
@@ -54,7 +54,7 @@ public class Zoo {
 
 }
 
-class Animals {
+class Animal {
     public String canDo1 = "eat";
     public String canDo2 = "run";
     private String type;
@@ -96,7 +96,7 @@ class Animals {
 
 }
 
-class Monkey extends Animals {
+class Monkey extends Animal {
     public String type = "Monkey";
     public String food = "Bananas";
     private String name;

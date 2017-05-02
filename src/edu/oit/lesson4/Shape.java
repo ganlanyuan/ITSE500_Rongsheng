@@ -1,25 +1,26 @@
 package edu.oit.lesson4;
 
-public class Shape {
-    private int sides = 0;
-
+public abstract class Shape {
+    private double area;
+    
+    abstract double getArea();
+    
     public static void main(String[] args) {
         // square
-        Square square = new Square(3);
-        System.out.println("The square width is " + square.getWidth() + ", area is " + square.getArea() + ".");
+        Shape square = new Square(3);
+        System.out.println("The square covers an area of " + square.getArea() + ".");
 
         // rectangle
-        Rectangle rectangle = new Rectangle(5, 3);
-        System.out.println("The rectangle Length is " + rectangle.getLength() + ", width is " + rectangle.getWidth()
-                + ", area is " + rectangle.getArea() + ".");
+        Shape rectangle = new Rectangle(5, 3);
+        System.out.println("The rectangle covers an area of " + rectangle.getArea() + ".");
 
         // circle
-        Circle circle = new Circle(4);
-        System.out.println("The circle radius is " + circle.getRadius() + ", area is " + circle.getArea() + ".");
+        Shape circle = new Circle(4);
+        System.out.println("The circle covers an area of " + circle.getArea() + ".");
 
         // triangle
-        Triangle triangle = new Triangle(7, 5, 4);
-        System.out.println("The triangle widths are " + triangle.getHypotenuse() + ", " + triangle.getOpposite() + ", " + triangle.getAdjacent() + ", area is " + triangle.getArea() + ".");
+        Shape triangle = new Triangle(7, 5, 4);
+        System.out.println("The triangle covers an area of " + triangle.getArea() + ".");
     }
 }
 
@@ -46,7 +47,7 @@ class Square extends Shape {
         this.width = width;
     }
 
-    public int getArea() {
+    public double getArea() {
         return calculateArea();
     }
 
@@ -88,7 +89,7 @@ class Rectangle extends Shape {
         this.width = width;
     }
 
-    public int getArea() {
+    public double getArea() {
         return calculateArea();
     }
 
