@@ -114,6 +114,6 @@ public class MyList {
             i++;
         } while(i <= buckets && sum < buckets);
         
-        return i - 1;
+        return i + (times - 1) - 1;
     }
 }

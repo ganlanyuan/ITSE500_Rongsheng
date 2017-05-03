@@ -54,6 +54,6 @@ public class MyListTest {
     
     @Test
     public void poorPigsTest() {
-        assertEquals(MyList.poorPigs(1000, 15, 60), 6);
+        assertEquals(MyList.poorPigs(1000, 15, 60), 9);
     }
 }
