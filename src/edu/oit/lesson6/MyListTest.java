@@ -51,4 +51,9 @@ public class MyListTest {
         ArrayList<Integer> newNums = new ArrayList<Integer>(Arrays.asList(0, 1));
         assertEquals(MyList.twoSum(nums, 9), newNums);
     }
+    
+    @Test
+    public void poorPigsTest() {
+        assertEquals(MyList.poorPigs(1000, 15, 60), 6);
+    }
 }

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class MyList {
-
+    
     public static int numUniqueValues(LinkedList<Integer> list) {
         LinkedList<Integer> newList = new LinkedList<Integer>();
 
@@ -102,5 +102,18 @@ public class MyList {
         }
 
         return newList;
+    }
+    
+    public static int poorPigs(int buckets, int minutesToDie, int minutesToTest) {
+        int sum = 0;
+        int times = (int) Math.floor(minutesToTest / minutesToDie);
+        
+        int i = 1;
+        do {
+            sum = (int) Math.pow(i, times);
+            i++;
+        } while(i <= buckets && sum < buckets);
+        
+        return i - 1;
     }
 }
