@@ -3,47 +3,45 @@ package edu.oit.lesson6;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 
 public class MyList {
     
     public static int numUniqueValues(LinkedList<Integer> list) {
-        LinkedList<Integer> newList = new LinkedList<Integer>();
+        // LinkedList<Integer> newList = new LinkedList<Integer>();
+        //
+        // for (Integer item : list) {
+        // if (!newList.contains(item)) {
+        // newList.add(item);
+        // }
+        // }
+        
+        Set<Integer> set = new HashSet<>();
+        set.addAll(list);
 
-        for (Integer item : list) {
-            if (!newList.contains(item)) {
-                newList.add(item);
-            }
-        }
-
-        return newList.size();
+        return set.size();
     }
 
     public static ArrayList<Integer> alternate(ArrayList<Integer> list1, ArrayList<Integer> list2) {
-        ArrayList<Integer> newList = new ArrayList<Integer>();
-        ArrayList<Integer> longerList = new ArrayList<Integer>();
+        ArrayList<Integer> newList = new ArrayList<>();
+        
         int len1 = list1.size();
         int len2 = list2.size();
         int lenMin = Math.min(len1, len2);
         int lenMax = Math.max(len1, len2);
 
-        // add the items alternately within the common length
-        for (int i = 0; i < lenMin; i++) {
-            newList.add(list1.get(i));
-            newList.add(list2.get(i));
-        }
-
-        // add the rest of items to the new list if the 2 list have different
-        // lengths
-        if (len1 != len2) {
-            if (len1 > len2) {
-                longerList = list1;
+        for (int i = 0; i < lenMax; i++) {
+            if (i < lenMin) {
+                newList.add(list1.get(i));
+                newList.add(list2.get(i));
             } else {
-                longerList = list2;
-            }
-
-            for (int i = lenMin; i < lenMax; i++) {
-                newList.add(longerList.get(i));
+                if (len1 > len2) {
+                    newList.add(list1.get(i));
+                } else if (len2 > len1) {
+                    newList.add(list2.get(i));
+                }
             }
         }
 
