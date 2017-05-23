@@ -2,7 +2,7 @@ package edu.oit.lesson6;
 
 import java.util.HashMap;
 
-public class mapDemo {
+public class MapDemo {
 
     public static void main(String[] args) {
         HashMap<Integer, String> hashMap = new HashMap();
