@@ -3,24 +3,24 @@ package edu.oit.lesson9;
 import java.util.Arrays;
 import java.util.List;
 
-public enum CookBook {
+public enum Cookbook {
     YUXIANGROUSI, DISANXIAN, MUXUROU, ZIRANNIUROU, SHUIZHUYU;
     
     private Meat meat;
     private List<Vegetable> vegetable;
     
     public static void main(String[] args) {
-        CookBook.YUXIANGROUSI.setMeat(Meat.FISH);
-        CookBook.YUXIANGROUSI.setVegetable(Arrays.asList(Vegetable.ONION, Vegetable.PEPPER));
-        CookBook.DISANXIAN.setVegetable(Arrays.asList(Vegetable.POTATO, Vegetable.PEPPER));
-        CookBook.MUXUROU.setMeat(Meat.PORK);
-        CookBook.MUXUROU.setVegetable(Arrays.asList(Vegetable.ONION, Vegetable.FUNGUS, Vegetable.CARROT));
-        CookBook.ZIRANNIUROU.setMeat(Meat.BEEF);
-        CookBook.ZIRANNIUROU.setVegetable(Arrays.asList(Vegetable.ONION));
-        CookBook.SHUIZHUYU.setMeat(Meat.FISH);
-        CookBook.SHUIZHUYU.setVegetable(Arrays.asList(Vegetable.CABBAGE, Vegetable.PEPPER));
+        Cookbook.YUXIANGROUSI.setMeat(Meat.FISH);
+        Cookbook.YUXIANGROUSI.setVegetable(Arrays.asList(Vegetable.ONION, Vegetable.PEPPER));
+        Cookbook.DISANXIAN.setVegetable(Arrays.asList(Vegetable.POTATO, Vegetable.PEPPER));
+        Cookbook.MUXUROU.setMeat(Meat.PORK);
+        Cookbook.MUXUROU.setVegetable(Arrays.asList(Vegetable.ONION, Vegetable.FUNGUS, Vegetable.CARROT));
+        Cookbook.ZIRANNIUROU.setMeat(Meat.BEEF);
+        Cookbook.ZIRANNIUROU.setVegetable(Arrays.asList(Vegetable.ONION));
+        Cookbook.SHUIZHUYU.setMeat(Meat.FISH);
+        Cookbook.SHUIZHUYU.setVegetable(Arrays.asList(Vegetable.CABBAGE, Vegetable.PEPPER));
         
-        for (CookBook item : CookBook.values()) {
+        for (Cookbook item : Cookbook.values()) {
             System.out.printf("%-12s %s %-5s %s %s\n", item.name(), " ==> meat: ", item.meat, "vegetables: ", item.vegetable);
         }
     }
