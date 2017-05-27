@@ -1,7 +1,6 @@
 package edu.oit.lesson4;
 
 public abstract class Shape {
-    private double area;
     
     abstract double getArea();
     
